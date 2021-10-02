@@ -1,9 +1,14 @@
+
+import 'package:app/pages/_HOMEPage/FoodPage.dart';
+import 'package:app/pages/_HOMEPage/ProfilePage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../HomePage.dart';
 
 class LoginPage extends StatefulWidget {
+  static const routeName = '/login';
+
   const LoginPage({Key? key}) : super(key: key);
 
   @override
@@ -18,7 +23,7 @@ Widget _showci() {
       height: 40.0,
       //color: Colors.green, // ห้ามกำหนด color ตรงนี้ ถ้าหากกำหนดใน BoxDecoration แล้ว
       decoration: BoxDecoration(
-        color: Colors.green.shade100,
+        color: Colors.blueGrey.shade100,
         shape: BoxShape.circle,
       ),
     ),
@@ -33,7 +38,7 @@ Widget _showciblack() {
       height: 40.0,
       //color: Colors.green, // ห้ามกำหนด color ตรงนี้ ถ้าหากกำหนดใน BoxDecoration แล้ว
       decoration: BoxDecoration(
-        color: Colors.green.shade900,
+        color: Colors.blueGrey.shade900,
         shape: BoxShape.circle,
       ),
     ),
@@ -139,7 +144,7 @@ class _LoginPageState extends State<LoginPage> {
             end: Alignment.bottomRight,
             // ไล่เฉดจากสีแดงไปสีน้ำเงิน
             colors: [
-              Colors.brown,
+              Colors.blueGrey.shade900,
               Colors.black,
             ],
           ),
@@ -224,10 +229,11 @@ class _LoginPageState extends State<LoginPage> {
     });
     if (input.length == 6) {
       if (input == showtext) {
-        Navigator.push(
+        /*Navigator.push(
           context,
           MaterialPageRoute(builder: (context) => HomePage()),
-        );
+        );*/
+        Navigator.pushReplacementNamed(context,HomePage.routeName);
         setshow(0);
         input =('');
       } else {
