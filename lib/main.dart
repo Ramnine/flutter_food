@@ -1,6 +1,7 @@
 import 'package:app/pages/HomePage.dart';
 import 'package:app/pages/_HOMEPage/FoodPage.dart';
 import 'package:app/pages/_HOMEPage/Foodpage/OrderPage.dart';
+import 'package:app/pages/_HOMEPage/Foodpage/fooddetails.dart';
 import 'package:app/pages/_HOMEPage/ProfilePage.dart';
 import 'package:app/pages/login/login_page.dart';
 import 'package:flutter/material.dart';
@@ -35,7 +36,7 @@ class MyApp extends StatelessWidget {
         LoginPage.routeName:(context) => const LoginPage() ,
         HomePage.routeName : (context) => const HomePage() ,
         FoodPage.routeName : (context) => const FoodPage(),
-
+        Fooddetails.routeName : (context) => const Fooddetails(),
       },
       initialRoute: LoginPage.routeName,
     );

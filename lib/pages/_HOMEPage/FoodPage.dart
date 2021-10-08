@@ -63,7 +63,7 @@ class _FoodPageState extends State<FoodPage> {
   Widget _setpage() {
     switch (_subPageIndex) {
       case 0:
-      return FoodListPage();
+      return Foodlist();
       case 1:
         return OrderPage();
       case 2:
